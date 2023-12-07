@@ -1,0 +1,12 @@
+        case .changeCornerRadius(let radius):
+            newCollage.cornerRadius = radius
+            
+        case .changeShape(let action, id: let id):
+            newCollage = changeShape(action, id: id, in: newCollage)
+            
+        case .addText(let text):
+            newCollage.texts.append(text)
+            
+        case .changeText(let action, id: let id):
+            newCollage = changeText(action, id: id, in: newCollage)
+            
